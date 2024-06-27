@@ -65,4 +65,4 @@ MovieDetails.getFetchUrls = ({ slug }) => [
 	// ShowStaff.query(slug),
 ];
 
-MovieDetails.getLayout = { Layout: DefaultLayout, props: { transparent: true } };
+MovieDetails.getLayout = { Layout: DefaultLayout, props: { transparent: true, gradient: true } };

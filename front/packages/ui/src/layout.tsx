@@ -26,16 +26,18 @@ import { Navbar } from "./navbar";
 export const DefaultLayout = ({
 	page,
 	transparent,
+	gradient,
 }: {
 	page: ReactElement;
 	transparent?: boolean;
+	gradient?: boolean;
 }) => {
 	const { css } = useYoshiki();
 
 	return (
 		<>
 			<Navbar
-				{...css(
+				{...css([
 					transparent && {
 						bg: "transparent",
 						position: "absolute",
@@ -44,7 +46,19 @@ export const DefaultLayout = ({
 						right: 0,
 						shadowOpacity: 0,
 					},
-				)}
+					gradient && {
+						background:
+						`
+						radial-gradient(at top left, rgba(0,0,0,0.8), rgba(0,0,0,0.0), rgba(0,0,0,0)),
+						radial-gradient(at top right, rgba(0,0,0,0.8), rgba(0,0,0,0.0), rgba(0,0,0,0))
+						`,					
+						position: "absolute",
+						top: 0,
+						left: 0,
+						right: 0,
+						shadowOpacity: 0,
+					},
+				])}
 			/>
 			<Main
 				{...css({

@@ -93,7 +93,7 @@ export const HomePage: QueryPage<{}, Genre> = ({ randomItems }) => {
 
 HomePage.randomItems = [...Object.values(Genre)];
 
-HomePage.getLayout = { Layout: DefaultLayout, props: { transparent: true } };
+HomePage.getLayout = { Layout: DefaultLayout, props: { transparent: true, gradient: true } };
 
 HomePage.getFetchUrls = (_, randomItems) => [
 	Header.query(),

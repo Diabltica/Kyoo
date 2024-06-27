@@ -156,4 +156,4 @@ ShowDetails.getFetchUrls = ({ slug, season }) => [
 	SeasonHeader.query(slug),
 ];
 
-ShowDetails.getLayout = { Layout: DefaultLayout, props: { transparent: true } };
+ShowDetails.getLayout = { Layout: DefaultLayout, props: { transparent: true, gradient : true } };
